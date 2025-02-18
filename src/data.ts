@@ -1,0 +1,148 @@
+import { Subscription, Transaction, SpendingData, SpecialOffer } from './types';
+
+const serviceUrls = {
+  'Netflix': 'https://www.netflix.com',
+  'Spotify': 'https://www.spotify.com',
+  'Adobe Creative Cloud': 'https://www.adobe.com/creativecloud.html',
+  'Disney+': 'https://www.disneyplus.com',
+  'Notion': 'https://www.notion.so',
+  'Apple Music': 'https://www.apple.com/apple-music/',
+  'HBO Max': 'https://www.hbomax.com',
+  'Amazon Prime': 'https://www.amazon.com/prime',
+  'YouTube Premium': 'https://www.youtube.com/premium',
+};
+
+export const subscriptions: Subscription[] = [
+  {
+    id: '1',
+    serviceName: 'Netflix',
+    logo: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=128&h=128&fit=crop',
+    planName: 'Premium 4K',
+    price: 19.99,
+    billingCycle: 'monthly',
+    nextPaymentDate: '2024-04-15',
+    status: 'active',
+    url: serviceUrls['Netflix'],
+  },
+  {
+    id: '2',
+    serviceName: 'Spotify',
+    logo: 'https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=128&h=128&fit=crop',
+    planName: 'Family Plan',
+    price: 14.99,
+    billingCycle: 'monthly',
+    nextPaymentDate: '2024-04-01',
+    status: 'active',
+    url: serviceUrls['Spotify'],
+  },
+  {
+    id: '3',
+    serviceName: 'Adobe Creative Cloud',
+    logo: 'https://images.unsplash.com/photo-1626785774625-0b1c09197357?w=128&h=128&fit=crop',
+    planName: 'All Apps',
+    price: 52.99,
+    billingCycle: 'monthly',
+    nextPaymentDate: '2024-04-10',
+    status: 'trial',
+    url: serviceUrls['Adobe Creative Cloud'],
+  },
+  {
+    id: '4',
+    serviceName: 'HBO Max',
+    logo: 'https://images.unsplash.com/photo-1586899028174-e7098604235b?w=128&h=128&fit=crop',
+    planName: 'Ad-Free',
+    price: 15.99,
+    billingCycle: 'monthly',
+    nextPaymentDate: '2024-04-05',
+    status: 'active',
+    url: serviceUrls['HBO Max'],
+  },
+  {
+    id: '5',
+    serviceName: 'Amazon Prime',
+    logo: 'https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?w=128&h=128&fit=crop',
+    planName: 'Annual',
+    price: 139.99,
+    billingCycle: 'yearly',
+    nextPaymentDate: '2024-08-15',
+    status: 'active',
+    url: serviceUrls['Amazon Prime'],
+  },
+  {
+    id: '6',
+    serviceName: 'YouTube Premium',
+    logo: 'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=128&h=128&fit=crop',
+    planName: 'Individual',
+    price: 11.99,
+    billingCycle: 'monthly',
+    nextPaymentDate: '2024-04-08',
+    status: 'active',
+    url: serviceUrls['YouTube Premium'],
+  },
+];
+
+export const specialOffers: SpecialOffer[] = [
+  {
+    id: '1',
+    serviceName: 'Netflix',
+    description: 'Get 3 months of Premium plan at 20% off',
+    discount: '20%',
+    validUntil: '2024-04-30',
+    url: serviceUrls['Netflix'],
+    logo: 'https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=128&h=128&fit=crop',
+  },
+  {
+    id: '2',
+    serviceName: 'Spotify',
+    description: 'First month free with annual subscription',
+    discount: '1 month free',
+    validUntil: '2024-05-15',
+    url: serviceUrls['Spotify'],
+    logo: 'https://images.unsplash.com/photo-1611339555312-e607c8352fd7?w=128&h=128&fit=crop',
+  },
+  {
+    id: '3',
+    serviceName: 'HBO Max',
+    description: 'Save 30% on 6-month subscription',
+    discount: '30%',
+    validUntil: '2024-04-20',
+    url: serviceUrls['HBO Max'],
+    logo: 'https://images.unsplash.com/photo-1586899028174-e7098604235b?w=128&h=128&fit=crop',
+  },
+];
+
+export const recommendations = [
+  {
+    id: 'disney',
+    serviceName: 'Disney+',
+    logo: 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=128&h=128&fit=crop',
+    description: 'Stream exclusive Disney content',
+    price: 7.99,
+    reason: 'Based on your Netflix subscription',
+    url: serviceUrls['Disney+'],
+  },
+  {
+    id: 'notion',
+    serviceName: 'Notion',
+    logo: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=128&h=128&fit=crop',
+    description: 'All-in-one workspace',
+    price: 8.00,
+    reason: 'Productivity tool recommendation',
+    url: serviceUrls['Notion'],
+  },
+  {
+    id: 'apple-music',
+    serviceName: 'Apple Music',
+    logo: 'https://images.unsplash.com/photo-1619983081563-430f63602796?w=128&h=128&fit=crop',
+    description: 'Stream millions of songs',
+    price: 10.99,
+    reason: 'Complete your music streaming experience',
+    url: serviceUrls['Apple Music'],
+  },
+];
+
+export const spendingTrends: SpendingData[] = [
+  { month: 'Jan', amount: 85.97 },
+  { month: 'Feb', amount: 85.97 },
+  { month: 'Mar', amount: 87.97 },
+];
